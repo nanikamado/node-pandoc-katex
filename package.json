@@ -4,7 +4,7 @@
   "description": "Filter to prerender KaTeX",
   "main": "pandoc-katex.js",
   "dependencies": {
-    "katex": "^0.10.1",
+    "katex": "^0.13.18",
     "pandoc-filter": "^2.0.2"
   },
   "devDependencies": {},
