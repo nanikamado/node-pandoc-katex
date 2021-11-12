@@ -5,7 +5,7 @@
   "main": "pandoc-katex.js",
   "dependencies": {
     "katex": "^0.10.1",
-    "pandoc-filter-promisified": "^0.1.0"
+    "pandoc-filter": "^2.0.2"
   },
   "devDependencies": {},
   "scripts": {

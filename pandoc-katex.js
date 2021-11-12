@@ -2,23 +2,21 @@
 
 // Pandoc filter to render all math with KaTeX
 
-var pandoc = require('pandoc-filter-promisified');
+var pandoc = require('pandoc-filter');
 var katex = require('katex');
 
 var RI = pandoc.RawInline;
 
-async function action(elt,format,meta) {
-
-	if (elt.t === 'Math'){
-		var [tag, math] = elt.c
-		if (tag.t === "DisplayMath")
+function action({t: type, c: value},format,meta) {
+	if (type === 'Math'){
+		if (value[0].t === "DisplayMath")
 		{
-			return RI("html", katex.renderToString(math, {
+			return RI("html", katex.renderToString(value[1], {
 				displayMode : true,
 				throwOnError : true
 			}))
-		} else if (tag.t === "InlineMath"){
-			return RI("html", katex.renderToString(math))
+		} else if (value[0].t === "InlineMath"){
+			return RI("html", katex.renderToString(value[1]))
 		}
 	} 
 }
