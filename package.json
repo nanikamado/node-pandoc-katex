@@ -1,6 +1,6 @@
 {
   "name": "pandoc-katex",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Filter to prerender KaTeX",
   "bin": {
     "pandoc-katex": "pandoc-katex.js"
