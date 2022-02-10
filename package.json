@@ -6,7 +6,7 @@
     "pandoc-katex": "pandoc-katex.js"
   },
   "dependencies": {
-    "katex": "^0.13.18",
+    "katex": "^0.15.2",
     "pandoc-filter": "^2.0.2"
   },
   "devDependencies": {},
